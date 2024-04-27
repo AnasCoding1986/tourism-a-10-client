@@ -17,7 +17,7 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/">Home</NavLink></li>
-        <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/about">About Us</NavLink></li>
+        <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/addSpots">Add Spots</NavLink></li>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/login">Login</NavLink></li>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/register">Register</NavLink></li>
         {
