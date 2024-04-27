@@ -12,6 +12,7 @@ import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import AddTouristSpot from './Components/AddTouristSpot/AddTouristSpot.jsx';
+import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "/addSpots",
         element: <AddTouristSpot></AddTouristSpot>
+      },
+      {
+        path: "/spot/:id",
+        element: <SpotDetails></SpotDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
       {
         path: "/login",

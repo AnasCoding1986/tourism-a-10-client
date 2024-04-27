@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const AllTouristSpot = ({ spot }) => {
@@ -13,7 +14,9 @@ const AllTouristSpot = ({ spot }) => {
                     <h2 className="text-center text-2xl font-extrabold font-caveatBrush">{touristsSpotName}</h2>
                     <p className="font-light">{description}</p>
                     <div className="card-actions justify-center">
+                        <Link to={`/spot/${_id}`}>
                         <button className="btn bg-[tomato] border-none btn-primary">View details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
