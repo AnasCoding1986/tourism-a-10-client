@@ -13,6 +13,7 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import AddTouristSpot from './Components/AddTouristSpot/AddTouristSpot.jsx';
 import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
+import Update from './Components/Update/Update.jsx';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/spot/:id",
         element: <SpotDetails></SpotDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
         loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
 

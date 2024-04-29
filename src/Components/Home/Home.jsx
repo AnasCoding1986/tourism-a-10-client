@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import AllTouristSpot from "../AllTouristSpot/AllTouristSpot";
 import TotalSpots from "../TotalSpots/TotalSpots";
@@ -45,15 +45,15 @@ const Home = () => {
                         confirmButtonColor: "#3085d6",
                         cancelButtonColor: "#d33",
                         confirmButtonText: "Yes, delete it!"
-                      }).then((result) => {
+                    }).then((result) => {
                         if (result.isConfirmed) {
-                          Swal.fire({
-                            title: "Deleted!",
-                            text: "Your file has been deleted.",
-                            icon: "success"
-                          });
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
                         }
-                      });
+                    });
                     console.log("daleted successfully");
                     const remainingSpot = mySpots.filter(spot => spot._id !== id);
                     setMyPlace(remainingSpot);
@@ -118,7 +118,9 @@ const Home = () => {
                                         <td>{spot.touristsSpotName}</td>
                                         <td>{spot.country}</td>
                                         <td>
-                                            <button><MdBrowserUpdated /></button>
+                                            <Link to={`update/${spot._id}`}>
+                                                <button><MdBrowserUpdated /></button>
+                                            </Link>
                                         </td>
                                         <td>
                                             <button onClick={() => handleDelete(spot._id)}><MdDelete /></button>
