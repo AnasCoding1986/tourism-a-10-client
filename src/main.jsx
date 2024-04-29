@@ -14,6 +14,7 @@ import Register from './Components/Register/Register.jsx';
 import AddTouristSpot from './Components/AddTouristSpot/AddTouristSpot.jsx';
 import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
         element: <SpotDetails></SpotDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
+
       {
         path: "/login",
         element: <Login></Login>,

@@ -1,7 +1,10 @@
 import { useLoaderData } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 import { IoBuild } from "react-icons/io5";
-import { MdBedroomChild } from "react-icons/md";
+import { MdEmail, MdSupervisedUserCircle, MdOutlineAccountBalance } from "react-icons/md";
 import { FaBath, FaChartArea } from "react-icons/fa6";
+import { GiDuration } from "react-icons/gi";
+import { GrOptimize } from "react-icons/gr";
 
 
 const SpotDetails = () => {
@@ -13,38 +16,43 @@ const SpotDetails = () => {
 
     return (
         <div>
-            <div className="relative bg-cover bg-center h-[600px] lg:h-96" style={{ backgroundImage: `url({photo})` }}>
+            <div className="relative bg-cover bg-center h-[1000px] lg:h-[500px]" style={{ backgroundImage: `url(${photo})` }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                            <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-center flex flex-col items-center justify-center border-[white] "> {/* First grid item */}
-                                <h1 className="text-xl font-semibold">${cost}</h1>
-                                <h1 className="text-3xl font-bold mb-4">{touristsSpotName}</h1>
-                                <p className="text-lg">{location}</p>
-                                <div className="flex gap-5 mx-auto w-1/2 mt-5">
-                                    <button className="btn btn-secondary border-none bg-[#FF6347]">About Us</button>
-                                    <button className="btn btn-secondary border-none bg-[#1f1d1c]">Contact Us</button>
-                                </div>
+                            <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-center p-10 flex flex-col items-center justify-center border-[white] "> {/* First grid item */}
+                                <h1 className="text-xl my-5 font-semibold">${cost}</h1>
+                                <h1 className="text-5xl font-black font-clicker mb-4">{touristsSpotName}</h1>
+                                <p className="text-base font-light">{location}</p>
+                                <p className="p-5 border-2 border-[white] m-5 rounded-lg font-extralight font-mono">{description}</p>
                             </div>
-                            <div data-aos="zoom-in-left" data-aos-duration="1500" className=""> {/* Second grid item, hidden on smaller devices */}
+                            <div data-aos="zoom-in-left" data-aos-duration="1500" className="p-10"> {/* Second grid item, hidden on smaller devices */}
                                 <div className="grid grid-cols-2 gap-5 p-5">
                                     <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
-                                        <IoBuild />
+                                        <GiDuration />
                                         <p>{travelTime}</p>
                                     </div>
                                     <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
-                                        <MdBedroomChild />
+                                        <GrOptimize />
                                         <p>{seasonality}</p>
                                     </div>
                                     <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
-                                        <FaBath />
+                                        <MdSupervisedUserCircle />
                                         <p>{totaVisitorsPerYear}</p>
                                     </div>
                                     <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
-                                        <FaChartArea />
+                                        <MdOutlineAccountBalance />
                                         <p>{country}</p>
+                                    </div>
+                                    <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
+                                        <FaUser />
+                                        <p>{name}</p>
+                                    </div>
+                                    <div className="p-5 text-center flex flex-col items-center gap-5 border-[1px] border-[white] border-dashed">
+                                        <MdEmail />
+                                        <p>{email}</p>
                                     </div>
                                 </div>
 

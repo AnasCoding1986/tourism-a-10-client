@@ -11,6 +11,7 @@ const Navbar = () => {
         console.log(user.displayName);
         console.log(user);
         console.log(user.photoURL);
+        console.log(user.email);
     } else {
         console.log("User not Exixts");
     }
@@ -23,7 +24,7 @@ const Navbar = () => {
         {
             user ?
                 <div className="flex">
-                    <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" className="mr-3" to="/contact">Contact Us</NavLink></li>
+                    <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" className="mr-3" to="/myList">My List</NavLink></li>
                     <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/updateUser">Update User</NavLink></li>
                 </div> :
                 ""
