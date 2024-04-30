@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { MdBrowserUpdated, MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import ContactUs from "../ContactUs/ContactUs";
+import AboutUs from "../AboutUs/AboutUs";
 
 
 
@@ -71,6 +73,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <AboutUs></AboutUs>
             <div>
                 <h2 className="text-center mt-20 text-3xl font-bold">Explore Exotic Tourist Havens</h2>
                 <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
@@ -138,6 +141,8 @@ const Home = () => {
 
 
             </div>
+
+            <ContactUs></ContactUs>
 
         </div>
     );
