@@ -1,6 +1,6 @@
 const AboutUs = () => {
     return (
-        <div className="w-10/12 mx-auto">
+        <div className="w-11/12 mx-auto">
             <h2 className="text-3xl text-center mt-20 my-10 font-luckiestGuy">About Easy Tour</h2>
             <div className="hero min-h-screen bg-base-200">
                 <div data-aos="zoom-in-up" data-aos-duration="1500" className="hero-content flex-col lg:flex-row">

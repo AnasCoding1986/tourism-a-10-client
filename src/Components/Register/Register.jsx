@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -26,9 +27,25 @@ const Register = () => {
 
         createUser(email, password)
             .then(res => {
-                alert("Successfully registered");
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Successfully registered",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate("/");
                 console.log(res.user);
+            })
+            .catch(data => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                  });
+                console.log(data);
+
             })
     }
 

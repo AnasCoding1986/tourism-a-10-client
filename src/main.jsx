@@ -15,6 +15,7 @@ import AddTouristSpot from './Components/AddTouristSpot/AddTouristSpot.jsx';
 import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
 import Update from './Components/Update/Update.jsx';
 import PrivateRpute from './Components/Route/PrivateRpute.jsx';
+import MyList from './Components/MyList/MyList.jsx';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/addSpots",
         element: <PrivateRpute><AddTouristSpot></AddTouristSpot></PrivateRpute>
+      },
+      {
+        path: "/mylist",
+        element: <PrivateRpute><MyList></MyList></PrivateRpute>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
       {
         path: "/spot/:id",

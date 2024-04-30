@@ -2,6 +2,10 @@ Server Repo Link: https://github.com/programming-hero-web-course-4/b9a10-server-
 
 Client Repo Link: https://github.com/programming-hero-web-course-4/B9A10-client-side-AnasCoding1986  
 
+Website Name : Easy Tour
+
+Selected Category : Requirements 1
+
 some key features are below:
 
 ntroduction to Easy Tour: Easy Tour is a comprehensive tourism website designed to simplify and enhance the travel planning experience for users worldwide.

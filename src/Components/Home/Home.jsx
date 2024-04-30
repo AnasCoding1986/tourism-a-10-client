@@ -79,7 +79,7 @@ const Home = () => {
                 <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
                 <div className="md:grid grid-cols-2 gap-4 p-10 ">
                     {
-                        spots.map(spot => <AllTouristSpot
+                        spots.slice(1,7).map(spot => <AllTouristSpot
                             spot={spot}
                             key={spot._id}></AllTouristSpot>)
                     }
@@ -97,50 +97,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div className="mb-20">
-                <h2 className="text-center mt-20 text-3xl font-bold">My added spots here</h2>
-                <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
 
-                <div className="overflow-x-auto">
-                    <table className="table">
-                        {/* head */}
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Spot Name</th>
-                                <th>Country</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                myPlace.length > 0 ? (
-                                    myPlace.map(spot => <tr key={spot._id}>
-                                        <td></td>
-                                        <td>{spot.touristsSpotName}</td>
-                                        <td>{spot.country}</td>
-                                        <td>
-                                            <Link to={`update/${spot._id}`}>
-                                                <button><MdBrowserUpdated /></button>
-                                            </Link>
-                                        </td>
-                                        <td>
-                                            <button onClick={() => handleDelete(spot._id)}><MdDelete /></button>
-                                        </td>
-
-
-                                    </tr>)
-                                ) : (
-                                    <p className="text-center text-xl my-6">No spots found for this user.</p>
-                                )
-                            }
-                        </tbody>
-                    </table>
-                </div>
-
-
-            </div>
 
             <ContactUs></ContactUs>
 
