@@ -17,6 +17,7 @@ import Update from './Components/Update/Update.jsx';
 import PrivateRpute from './Components/Route/PrivateRpute.jsx';
 import MyList from './Components/MyList/MyList.jsx';
 import GrandTotal from './Components/GrandTotal/GrandTotal.jsx';
+import Spots from './Components/Spots/Spots.jsx';
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
         path: "/spot/:id",
         element: <PrivateRpute><SpotDetails></SpotDetails></PrivateRpute>,
         loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+      },
+      {
+        path: "/countries/:id",
+        element: <Spots></Spots>,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/${params.id}`)
       },
       {
         path: "/update/:id",
