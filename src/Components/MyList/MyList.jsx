@@ -18,7 +18,7 @@ const MyList = () => {
 
     const [myPlace, setMyPlace] = useState(mySpots);
 
-    
+
 
     const handleDelete = id => {
         fetch(`http://localhost:5000/spot/${id}`, {
@@ -53,7 +53,7 @@ const MyList = () => {
 
     return (
         <div className="mb-20">
-            <h2 className="text-center mt-20 text-3xl font-bold">My added spots here</h2>
+            <h2 className="text-center mt-20 text-3xl font-bold font-luckiestGuy">My added spots here</h2>
             <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
 
             <div className="overflow-x-auto">
@@ -77,7 +77,7 @@ const MyList = () => {
                                     <td>{spot.country}</td>
                                     <td>
                                         <Link to={`update/${spot._id}`}>
-                                            <button><MdBrowserUpdated /></button>
+                                            <button data-for='happyFace'><MdBrowserUpdated /></button>
                                         </Link>
                                     </td>
                                     <td>

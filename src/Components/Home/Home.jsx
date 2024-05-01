@@ -75,7 +75,7 @@ const Home = () => {
             <Banner></Banner>
             <AboutUs></AboutUs>
             <div>
-                <h2 className="text-center mt-20 text-3xl font-bold">Explore Exotic Tourist Havens</h2>
+                <h2 className="text-center mt-20 text-3xl font-bold font-luckiestGuy">Explore Exotic Tourist Havens</h2>
                 <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
                 <div className="md:grid grid-cols-2 gap-4 p-10 ">
                     {
@@ -85,18 +85,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div>
-                <h2 className="text-center mt-20 text-3xl font-bold">All the spots here</h2>
-                <p className="max-w-2xl text-center my-6 mx-auto">Embark on a journey to unearth hidden treasures, from serene landscapes to vibrant cultures, creating unforgettable memories awaits!</p>
-                <div className="md:grid grid-cols-2 gap-4 p-10 ">
-                    {
-                        spots.map(spot => <TotalSpots
-                            spot={spot}
-                            key={spot._id}
-                        ></TotalSpots>)
-                    }
-                </div>
-            </div>
+
 
 
             <ContactUs></ContactUs>

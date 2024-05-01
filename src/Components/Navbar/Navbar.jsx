@@ -34,6 +34,7 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/">Home</NavLink></li>
+        <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/grandTotal">All Spots</NavLink></li>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/login">Login</NavLink></li>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/register">Register</NavLink></li>
         {
@@ -88,7 +89,7 @@ const Navbar = () => {
                     {
                         user ?
                             <div className="flex items-center">
-                                <div className="w-10 rounded-full mr-4 tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <div className="w-10 z-10 rounded-full mr-4 tooltip tooltip-bottom" data-tip={user.displayName}>
                                     <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000" className="rounded-full" alt="User Pic" src={user.photoURL} />
                                 </div>
                                 <button data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000" onClick={logOut} className="btn">Logout</button>

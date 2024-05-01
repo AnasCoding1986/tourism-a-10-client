@@ -26,7 +26,7 @@ const Update = () => {
         console.log(updatedSpot);
 
         // send data to the server
-        fetch(`http://localhost:5000/spot/${_id}`, {
+        fetch(`http://localhost:5000/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

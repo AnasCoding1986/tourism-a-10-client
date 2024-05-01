@@ -6,6 +6,8 @@ Website Name : Easy Tour
 
 Selected Category : Requirements 1
 
+live site: https://tourism-6b17e.web.app
+
 some key features are below:
 
 ntroduction to Easy Tour: Easy Tour is a comprehensive tourism website designed to simplify and enhance the travel planning experience for users worldwide.

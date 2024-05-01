@@ -44,7 +44,7 @@ const AddTouristSpot = () => {
 
     return (
         <div>
-            <h2 className="text-center text-3xl mt-7 mb-4 font-extrabold">You can add your desired spots here</h2>
+            <h2 className="text-center text-3xl mt-7 mb-4 font-extrabold font-luckiestGuy">You can add your desired spots here</h2>
             <div>
                 <form onSubmit={handleAdd} className="md:grid grid-cols-2 gap-5 p-10">
                     <div className="my-2">

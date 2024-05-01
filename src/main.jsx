@@ -16,6 +16,7 @@ import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
 import Update from './Components/Update/Update.jsx';
 import PrivateRpute from './Components/Route/PrivateRpute.jsx';
 import MyList from './Components/MyList/MyList.jsx';
+import GrandTotal from './Components/GrandTotal/GrandTotal.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/spot')
+      },
+      {
+        path: "/grandTotal",
+        element: <GrandTotal></GrandTotal>,
         loader: () => fetch('http://localhost:5000/spot')
       },
       {
