@@ -6,7 +6,7 @@ Website Name : Easy Tour
 
 Selected Category : Requirements 1
 
-live site: https://tourism-6b17e.web.app
+live site: https://tourism-6b17e.web.app/
 
 some key features are below:
 

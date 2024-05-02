@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
       },
       {
         path: "/grandTotal",
         element: <GrandTotal></GrandTotal>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
       },
       {
         path: "/addSpots",
@@ -43,22 +43,22 @@ const router = createBrowserRouter([
       {
         path: "/mylist",
         element: <PrivateRpute><MyList></MyList></PrivateRpute>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
       },
       {
         path: "/spot/:id",
         element: <PrivateRpute><SpotDetails></SpotDetails></PrivateRpute>,
-        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/spot/${params.id}`)
       },
       {
         path: "/countries/:id",
         element: <Spots></Spots>,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/countries/${params.id}`)
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/spot/${params.id}`)
       },
 
       {

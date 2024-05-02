@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 const Banner = () => {
   return (
     <Swiper
-      modules={[ Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       autoplay={{
         delay: 2000,

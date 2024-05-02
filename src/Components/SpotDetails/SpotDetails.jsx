@@ -1,8 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
-import { IoBuild } from "react-icons/io5";
 import { MdEmail, MdSupervisedUserCircle, MdOutlineAccountBalance } from "react-icons/md";
-import { FaBath, FaChartArea } from "react-icons/fa6";
 import { GiDuration } from "react-icons/gi";
 import { GrOptimize } from "react-icons/gr";
 

@@ -22,7 +22,7 @@ const AddTouristSpot = () => {
         console.log(spot);
 
         // send data to the server
-        fetch('http://localhost:5000/spot', {
+        fetch('https://tourism-rosy.vercel.app/spot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

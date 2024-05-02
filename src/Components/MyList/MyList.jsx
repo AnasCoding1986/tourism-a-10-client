@@ -21,7 +21,7 @@ const MyList = () => {
 
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/spot/${id}`, {
+        fetch(`https://tourism-rosy.vercel.app/spot/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
